@@ -1,4 +1,6 @@
 #!/bin/bash
-sudo service httpd stop 
-
+isExistApp = `pgrep httpd`
+if [[ -n  $isExistApp ]]; then
+    service httpd stop        
+fi
 
